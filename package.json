@@ -1,0 +1,49 @@
+{
+  "name":    "phaser-pong",
+  "version": "0.0.1",
+
+  "projectId":   "org.unindented.phaser.pong",
+  "projectName": "pong",
+  "productName": "Pong",
+  "description": "A multiplatform Pong clone built using Phaser.",
+  "copyright":   "Copyright 2015 Daniel Perez Alvarez",
+
+  "main": "src/index.js",
+
+  "author": {
+    "name":  "Daniel Perez Alvarez",
+    "email": "unindented@gmail.com",
+    "url":   "http://unindented.org/"
+  },
+
+  "repository": {
+    "type": "git",
+    "url":  "git://github.com/unindented/phaser-pong.git"
+  },
+
+  "os": [
+    "darwin",
+    "linux"
+  ],
+
+  "dependencies": {
+    "phaser": "^2.2.2"
+  },
+
+  "devDependencies": {
+    "lodash":              "^3.2.0",
+    "rcedit":              "^0.3.0",
+
+    "grunt":               "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy":  "^0.7.0",
+    "grunt-webpack":       "^1.0.8",
+    "load-grunt-config":   "^0.16.0",
+
+    "babel-loader":        "^4.0.0",
+    "exports-loader":      "^0.6.2",
+    "imports-loader":      "^0.6.3",
+    "file-loader":         "^0.8.1",
+    "loader-utils":        "^0.2.6"
+  }
+}
