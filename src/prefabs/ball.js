@@ -1,6 +1,7 @@
 'use strict';
 
 import Phaser from 'phaser';
+import Emitter from 'prefabs/emitter';
 
 const INIT_ANGLE = 90;
 const INIT_SPEED = 200;
@@ -31,6 +32,9 @@ export default class Ball extends Phaser.Sprite {
     // The ball collides with the world bounds.
     this.body.collideWorldBounds = true;
     this.checkWorldBounds = true;
+
+    // Add a particle emitter.
+    this.emitter = game.add.existing(new Emitter(game));
   }
 
   launch(target) {
@@ -63,6 +67,10 @@ export default class Ball extends Phaser.Sprite {
     this.body.velocity.rotate(0, 0, deviation);
     // ... and it will accelerate slightly.
     this.body.velocity.setMagnitude(speed);
+
+    // It will also emit some particles from the collision point in the
+    // direction opposite to the movement.
+    this.emitter.emit(this.x + (sign * this.width / 2), this.y, -sign);
   }
 
   show() {

@@ -16,6 +16,9 @@ export default class Preload {
     this.load.image('net', require('graphics/net.png'));
     this.load.image('paddle', require('graphics/paddle.png'));
     this.load.image('ball', require('graphics/ball.png'));
+
+    this.load.spritesheet('particles', require('graphics/particles.png'), 2, 2);
+
     this.load.bitmapFont('pong', require('fonts/pong.png'), require('fonts/pong.xml'));
   }
 
